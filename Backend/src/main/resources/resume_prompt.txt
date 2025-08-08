@@ -1,0 +1,116 @@
+Generate a professional IT job resume in JSON format based on the following description. Ensure the JSON is consistent, well-structured, and contains all specified keys, even if some values are empty or null. Use the exact keys provided below and maintain their hierarchy.
+
+Input Description:
+"{{userDescription}}"
+Critical Instructions:
+Fill all data from my given description.
+Output only valid JSON with no extra text, explanations, or formatting.
+Use exactly this structure and key names — if no data is available for a section, return an empty array [] (for lists) or an empty string "" (for text fields).
+Never return null values.
+Ensure arrays are always arrays, even if they have only one element.
+Keep keys in the same order as below.
+ most important create my resume on the basis on my input description and which feild is not given fill it random
+JSON Structure Requirements:
+personalInformation: Include the following keys:
+fullName (string)
+email (string)
+phoneNumber (string)
+location (string)
+linkedIn (string or null if not provided)
+gitHub (string or null if not provided)
+portfolio (string or null if not provided)
+summary: A brief overview of skills, experience, and career goals (string).
+skills: List of object that contain two keys 'title' and 'level'
+
+experience: A list of job roles. Each job role should include:
+jobTitle (string)
+company (string)
+location (string)
+duration (string, e.g., "Jan 2020 - Present")
+responsibility(string)
+
+education: A list of degrees. Each degree should include:
+degree (string)
+university (string)
+location (string)
+graduationYear (string)
+
+certifications: A list of certifications. Each certification should include:
+title (string)
+issuingOrganization (string)
+year (string)
+
+projects: A list of key projects. Each project should include:
+title (string)
+description (string)
+technologiesUsed (array of strings)
+githubLink (string or null if not provided)
+
+achievements: A list achievements that contains objects of keys
+title (string)
+year(string)
+extraInformation(string)
+
+languages: A list of spoken languages objects contain keys
+id(number)
+name(string)
+
+interests: A list of additional interests or hobbies related to technology or professional development  [list of objects having keys].
+id(number)
+name(string)
+
+Please create a professional IT job resume in JSON format based on this input: "{{userDescription}}".
+
+Follow this structure exactly with these key names and types:
+
+- personalInformation (object):
+  - fullName (string)
+  - email (string)
+  - phoneNumber (string)
+  - location (string)
+  - linkedIn (string or null)
+  - gitHub (string or null)
+  - portfolio (string or null)
+
+- education (array of objects), each with:
+  - degree (string)
+  - university (string)
+  - location (string)
+  - graduationYear (string)
+
+- experience (array of objects), each with:
+  - jobTitle (string)
+  - company (string)
+  - location (string)
+  - duration (string)
+  - responsibility (string)
+
+- skills (array of objects), each with:
+  - title (string)
+  - level (string)
+
+- certifications (array of objects), each with:
+  - title (string)
+  - issuingOrganization (string)
+  - year (string)
+
+- projects (array of objects), each with:
+  - title (string)
+  - description (string)
+  - technologiesUsed (array of strings)
+  - githubLink (string or null)
+
+- achievements (array of objects), each with:
+  - title (string)
+  - year (string)
+  - extraInformation (string)
+
+- languages (array of objects), each with:
+  - id (number)
+  - name (string)
+
+- interests (array of objects), each with:
+  - id (number)
+  - name (string)
+
+If some information is missing, fill strings with null and arrays with empty lists. Please return **only valid JSON**, nothing else.
